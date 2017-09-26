@@ -1,0 +1,9 @@
+<h2>{{ optionTitle }}</h2>
+<div
+  *ngFor="let productOption of productOptions"
+  (click)="updateSelectedOption(productOption)"
+  [ngClass]="{'product-option--selected': productOption === selectedOption}"
+>
+  {{ productOption.title }}
+</div>
+<button [disabled]="!selectedOption" (click)="emitSelectedOption()">Next</button>

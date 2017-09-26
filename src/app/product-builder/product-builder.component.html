@@ -1,0 +1,5 @@
+<app-option-selection (onSubmit)="onOptionSubmit($event)" [productOptions]="productOptions"></app-option-selection>
+
+<app-product-summary [(cartItem)]="cartItem"></app-product-summary>
+
+<button (click)="addToCart()">Add To Cart</button>

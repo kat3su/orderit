@@ -1,0 +1,5 @@
+<div *ngFor="let productOption of cartItem.product.options">
+  {{ productOption.title }}
+</div>
+<input name="item_quantity" [(ngModel)]="cartItem.quantity" />
+<textarea name="item_note" [(ngModel)]="cartItem.note"></textarea>
