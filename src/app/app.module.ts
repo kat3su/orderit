@@ -8,6 +8,7 @@ import { ProductOrderingComponent } from './product-ordering/product-ordering.co
 import {FormsModule} from '@angular/forms';
 import { ProductSummaryComponent } from './product-builder/product-summary/product-summary.component';
 import {HttpModule} from '@angular/http';
+import {AppRoutingModule} from './app.route';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {HttpModule} from '@angular/http';
     BrowserModule,
     FormsModule,
     HttpModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
