@@ -9,6 +9,7 @@ import {FormsModule} from '@angular/forms';
 import { ProductSummaryComponent } from './product-builder/product-summary/product-summary.component';
 import {HttpModule} from '@angular/http';
 import {AppRoutingModule} from './app.route';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {AppRoutingModule} from './app.route';
     OptionSelectionComponent,
     ProductBuilderComponent,
     ProductOrderingComponent,
-    ProductSummaryComponent
+    ProductSummaryComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,

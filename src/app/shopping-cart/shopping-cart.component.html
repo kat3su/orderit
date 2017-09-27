@@ -1,0 +1,11 @@
+<ng-template [ngIf]="cart.hasItem()">
+  <div *ngFor="let item of cart.items">
+    <span *ngFor="let productOption of item.product.options">{{ productOption.title }}</span>
+    {{ item.price }}
+    {{ item.qty }}
+    {{ item.note }}
+  </div>
+</ng-template>
+<ng-template [ngIf]="!cart.hasItem()">
+  Empty
+</ng-template>
