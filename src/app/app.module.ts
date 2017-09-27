@@ -7,6 +7,7 @@ import { ProductBuilderComponent } from './product-builder/product-builder.compo
 import { ProductOrderingComponent } from './product-ordering/product-ordering.component';
 import {FormsModule} from '@angular/forms';
 import { ProductSummaryComponent } from './product-builder/product-summary/product-summary.component';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProductSummaryComponent } from './product-builder/product-summary/produ
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

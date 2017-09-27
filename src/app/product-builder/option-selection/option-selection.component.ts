@@ -25,7 +25,7 @@ export class OptionSelectionComponent implements OnInit {
    */
   updateSelectedOption(option: ProductOption) {
     if (this.selectedOption === option) {
-      this.selectedOption = null;
+      this.resetSelectedOption();
     } else {
       this.selectedOption = option;
     }
@@ -33,5 +33,10 @@ export class OptionSelectionComponent implements OnInit {
 
   emitSelectedOption() {
     this.onSubmit.emit(this.selectedOption);
+    this.resetSelectedOption();
+  }
+
+  resetSelectedOption() {
+    this.selectedOption = null;
   }
 }
