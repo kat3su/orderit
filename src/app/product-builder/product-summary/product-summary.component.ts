@@ -10,15 +10,10 @@ export class ProductSummaryComponent implements OnInit {
 
   @Input()
   cartItem: CartItem = new CartItem();
-  @Output()
-  cartItemChange: EventEmitter<CartItem> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSubmit() {
-    this.cartItemChange.emit(this.cartItem);
-  }
 }

@@ -1,5 +1,5 @@
 <app-option-selection (onSubmit)="onOptionSubmit($event)" [productOptions]="productOptions" *ngIf="!hasAllOptionSelected"></app-option-selection>
 
-<app-product-summary [(cartItem)]="cartItem" *ngIf="hasAllOptionSelected"></app-product-summary>
+<app-product-summary [cartItem]="cartItem" *ngIf="hasAllOptionSelected"></app-product-summary>
 
 <button (click)="addToCart()">Add To Cart</button>

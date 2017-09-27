@@ -4,6 +4,8 @@ import {ProductOption} from '../@model/product-option';
 import {CartItem} from '../@model/cart-item';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
+import {CartStorage} from '../@model/cart-storage';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-product-builder',
@@ -26,12 +28,9 @@ export class ProductBuilderComponent implements OnInit {
   options = [ this.formulaOption1, this.formulaOption2, this.formularOption3 ];
   optionIndex = 0;
   productOptions: ProductOption[];
-  @Input()
   cartItem: CartItem = new CartItem();
-  @Output()
-  onAddToCart: EventEmitter<CartItem> = new EventEmitter();
   hasAllOptionSelected = false;
-  constructor(private http: Http) { }
+  constructor(private http: Http, private router: Router) { }
 
   ngOnInit() {
     this.displayOption();
@@ -43,11 +42,13 @@ export class ProductBuilderComponent implements OnInit {
     this.optionIndex++;
     if (this.optionIndex >= this.options.length) {
       this.hasAllOptionSelected = true;
+    } else {
+      this.displayOption();
     }
-    this.displayOption();
   }
   addToCart() {
-    this.onAddToCart.emit(this.cartItem);
+    CartStorage.addItem(this.cartItem);
+    this.router.navigate(['']);
   }
   priceFormula() {
     return this.formulaOption1.value + this.formulaOption2.value + this.formularOption3.value;
