@@ -30,6 +30,7 @@ export class ProductBuilderComponent implements OnInit {
   cartItem: CartItem = new CartItem();
   @Output()
   onAddToCart: EventEmitter<CartItem> = new EventEmitter();
+  hasAllOptionSelected = false;
   constructor(private http: Http) { }
 
   ngOnInit() {
@@ -40,6 +41,9 @@ export class ProductBuilderComponent implements OnInit {
     this.options[this.optionIndex].value = selectedOption.value;
     this.cartItem.price = this.priceFormula();
     this.optionIndex++;
+    if (this.optionIndex >= this.options.length) {
+      this.hasAllOptionSelected = true;
+    }
     this.displayOption();
   }
   addToCart() {
