@@ -4,7 +4,7 @@ import {CartItem} from '../../@model/cart-item';
 @Component({
   selector: 'app-product-summary',
   templateUrl: './product-summary.component.html',
-  styleUrls: ['./product-summary.component.sass']
+  styleUrls: ['./product-summary.component.scss']
 })
 export class ProductSummaryComponent implements OnInit {
 

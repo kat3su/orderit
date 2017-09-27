@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'app-product-builder',
   templateUrl: './product-builder.component.html',
-  styleUrls: ['./product-builder.component.sass']
+  styleUrls: ['./product-builder.component.scss']
 })
 export class ProductBuilderComponent implements OnInit {
   formulaOption1 = {

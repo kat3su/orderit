@@ -1,7 +1,25 @@
-<h3>Here it is:</h3>
-<div *ngFor="let productOption of cartItem.product.options">
-  {{ productOption.title }}
+<div class="product-summary">
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngFor="let productOption of cartItem.product.options" class="product-summary__selected-option">
+        {{ productOption.title }}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="product-sumary__note">
+        <p>Note:</p>
+        <textarea name="item_note" [(ngModel)]="cartItem.note"></textarea>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="product-summary__price">
+        Price: {{ cartItem.price }}
+      </div>
+      <div class="product-summary__quantity">
+        <input name="item_quantity" [(ngModel)]="cartItem.quantity" />
+      </div>
+    </div>
+  </div>
 </div>
-{{cartItem.price}}
-<input name="item_quantity" [(ngModel)]="cartItem.quantity" />
-<textarea name="item_note" [(ngModel)]="cartItem.note"></textarea>

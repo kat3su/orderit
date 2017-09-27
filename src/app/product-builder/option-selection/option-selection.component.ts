@@ -4,7 +4,7 @@ import {ProductOption} from '../../@model/product-option';
 @Component({
   selector: 'app-option-selection',
   templateUrl: './option-selection.component.html',
-  styleUrls: ['./option-selection.component.sass']
+  styleUrls: ['./option-selection.component.scss']
 })
 export class OptionSelectionComponent implements OnInit {
 
